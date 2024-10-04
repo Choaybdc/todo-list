@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To-Do List with Categories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>To-Do List</h1>
+<div class="input-container">
+    <input type="text" id="new-task" placeholder="Add a new task...">
+    <input type="datetime-local" id="task-datetime"> <!-- Date-Time picker -->
+    <input type="color" id="task-color" value="#e9ecef"> <!-- Color picker -->
+    <div id="color-box" style="width: 30px; height: 30px; border: 1px solid #ccc; background-color: #e9ecef; margin-left: 10px;"></div> <!-- Color box -->
+    
+    <input type="number" id="reminder-value" placeholder="Value" min="1" style="width: 60px; margin-left: 10px;"> <!-- Reminder value input -->
+    
+    <select id="reminder-unit" style="margin-left: 10px;">
+        <option value="seconds">Seconds</option>
+        <option value="minutes">Minutes</option>
+        <option value="hours">Hours</option>
+        <option value="days">Days</option>
+        <option value="months">Months</option>
+        <option value="years">Years</option>
+    </select> <!-- Reminder unit selection -->
+    
+    <button id="add-task-btn">Add Task</button>
+</div>
+<!-- Modal Dialog for Reminder -->
+<div id="reminder-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span id="modal-close" class="close">&times;</span>
+        <p id="modal-message">You have a reminder!</p>
+        <button id="extend-reminder-btn">Extend Reminder</button>
+        <button id="dismiss-reminder-btn">Dismiss</button>
+    </div>
+</div>
+
+
+
+        <div class="task-columns">
+            <div class="task-column">
+                <h2>To-Do</h2>
+                <ul id="todo-tasks" class="task-list">
+                    <!-- To-Do tasks will go here -->
+                </ul>
+            </div>
+            <div class="task-column">
+                <h2>Doing</h2>
+                <ul id="doing-tasks" class="task-list">
+                    <!-- Doing tasks will go here -->
+                </ul>
+            </div>
+            <div class="task-column">
+                <h2>Done</h2>
+                <ul id="done-tasks" class="task-list">
+                    <!-- Done tasks will go here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

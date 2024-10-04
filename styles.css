@@ -1,0 +1,165 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles with gradient blue background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Blue gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main container styling */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2193b0;
+}
+
+/* Input and button styling */
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="datetime-local"], input[type="color"] { /* Added datetime and color input styles */
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px; /* Space between inputs */
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #2193b0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #176f85;
+}
+
+/* Task columns */
+.task-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Individual task column */
+.task-column {
+    width: 30%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h2 {
+    color: #2193b0;
+}
+
+/* Task list styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    flex-direction: column;
+    /* Removed the hardcoded background-color */
+}
+
+li span {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+button.delete-btn:hover {
+    background-color: #c82333;
+}
+
+button.move-btn {
+    background-color: #28a745;
+}
+
+button.move-btn:hover {
+    background-color: #218838;
+}
+/* Modal styles */
+.modal {
+    display: flex; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
